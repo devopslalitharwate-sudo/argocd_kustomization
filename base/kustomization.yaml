@@ -2,3 +2,4 @@ resources:
     - deployment.yaml
     - services.yaml
     - application.yaml
+    - configMap.yaml
