@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook-prod
+  name: guestbook
   namespace: argocd
 spec:
   project: default
@@ -10,12 +10,4 @@ spec:
     targetRevision: main
     path: overlays/prod
   destination:
-    server: https://kubernetes.default.svc
     namespace: guestbook-prod
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
-
